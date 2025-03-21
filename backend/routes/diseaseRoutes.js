@@ -1,4 +1,3 @@
-// backend/routes/diseaseRoutes.js
 const express = require('express');
 const Disease = require('../models/Disease');
 const router = express.Router();

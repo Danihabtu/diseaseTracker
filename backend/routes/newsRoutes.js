@@ -1,4 +1,3 @@
-// routes/newsRoutes.js
 const express = require('express');
 const News = require('../models/News');
 const router = express.Router();

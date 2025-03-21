@@ -1,13 +1,13 @@
-// backend/server.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const officerRoutes = require('./routes/officerRoutes'); // Officer management
-const newsRoutes = require('./routes/newsRoutes');         // News management
-const diseaseRoutes = require('./routes/diseaseRoutes');   // Disease management
+
+const officerRoutes = require('./routes/officerRoutes');
+const newsRoutes = require('./routes/newsRoutes');
+const diseaseRoutes = require('./routes/diseaseRoutes');
+const reportRoutes = require('./routes/reportRoutes');
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 
@@ -22,6 +22,7 @@ mongoose
 app.use('/api/officers', officerRoutes);
 app.use('/api/news', newsRoutes);
 app.use('/api/diseases', diseaseRoutes);
+app.use('/api/reports', reportRoutes);
 
 app.get('/', (req, res) => {
   res.send('Server is running...');

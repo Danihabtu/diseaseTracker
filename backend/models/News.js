@@ -1,13 +1,12 @@
-// models/News.js
 const mongoose = require('mongoose');
 
 const NewsSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     content: { type: String, required: true },
-    imageUrl: { type: String, required: true }, // Ensuring imageUrl is required
+    imageUrl: { type: String, required: true }
   },
-  { timestamps: true } // Automatically creates createdAt and updatedAt
+  { timestamps: true }
 );
 
 module.exports = mongoose.model('News', NewsSchema);
